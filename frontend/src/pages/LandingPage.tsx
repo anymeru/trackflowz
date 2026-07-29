@@ -472,11 +472,78 @@ const LandingPage = () => {
       </section>
 
       {/* ─── CTA ─── */}
-      <section className="py-32 bg-gray-900">
-        {null}
+      {/* ─── Partners / Carriers ─── */}
+      <section className="py-32 bg-gray-50 overflow-hidden">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <motion.div {...fadeUpBlur} className="text-center mb-16">
+            <span className="inline-block rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-medium bg-black/5 text-gray-600 mb-6">
+              Carrier network
+            </span>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-gray-900 tracking-tight leading-[1.05]">
+              Partners we ship with
+            </h2>
+            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-lg leading-relaxed">
+              Direct integrations with the world's leading carriers — sea, air, road and express — all unified in one tracking view.
+            </p>
+          </motion.div>
+
+          <motion.div {...fadeUpBlur}>
+            <div className="p-[1px] rounded-[2rem] bg-black/[0.03]">
+              <div className="rounded-[calc(2rem-1px)] bg-white shadow-[0_2px_40px_-12px_rgba(0,0,0,0.06)] p-8 md:p-10">
+                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-6 gap-y-8">
+                  {partners.map((p) => (
+                    <div
+                      key={p.name}
+                      className="group flex flex-col items-center justify-center gap-2"
+                      title={p.name}
+                    >
+                      <div className="w-full aspect-[3/2] rounded-xl bg-gray-50 border border-black/[0.04] flex items-center justify-center p-3 transition-all duration-700 ease-out-expo group-hover:bg-white group-hover:shadow-[0_4px_24px_-8px_rgba(0,0,0,0.08)] group-hover:border-black/10">
+                        <img
+                          src={`https://logo.clearbit.com/${p.domain}`}
+                          alt={`${p.name} logo`}
+                          loading="lazy"
+                          className="max-h-10 max-w-full object-contain grayscale opacity-70 transition-all duration-700 ease-out-expo group-hover:grayscale-0 group-hover:opacity-100"
+                          onError={(e) => {
+                            const t = e.currentTarget;
+                            t.style.display = "none";
+                            const fb = t.nextElementSibling as HTMLElement | null;
+                            if (fb) fb.style.display = "flex";
+                          }}
+                        />
+                        <span
+                          style={{ display: "none" }}
+                          className="w-full h-full items-center justify-center font-display text-xs font-semibold text-gray-500 text-center leading-tight"
+                        >
+                          {p.name}
+                        </span>
+                      </div>
+                      <span className="text-[10px] uppercase tracking-[0.15em] text-gray-400 font-medium text-center">
+                        {p.name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-10 pt-8 border-t border-black/[0.04] flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    <span className="font-display font-semibold text-gray-900">120+ carriers</span> integrated worldwide — and growing every month.
+                  </p>
+                  <Link to="/contact">
+                    <span className="rounded-full text-sm font-medium bg-gray-900 text-white inline-flex items-center pl-6 pr-1 py-1 gap-3 transition-all duration-700 ease-out-expo hover:bg-gray-800 active:scale-[0.97]">
+                      <span>Request a carrier</span>
+                      <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                        <ArrowRight className="w-4 h-4" />
+                      </span>
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </section>
-      {/* PARTNERS_INJECT */}
-      <section className="hidden">{null}</section>
+
+      {/* ─── CTA ─── */}
       <section className="py-32 bg-gray-900">
         <div className="container mx-auto px-6 text-center max-w-3xl">
           <motion.div
