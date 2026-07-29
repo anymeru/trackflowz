@@ -100,6 +100,33 @@ const LandingPage = () => {
     { name: "Yuki Tanaka", role: "Founder, Lumen Studio", quote: "The ETA accuracy is genuinely uncanny. Our clients trust us more because we finally trust our own timeline." },
   ];
 
+  const partners = [
+    { name: "FedEx", domain: "fedex.com" },
+    { name: "UPS", domain: "ups.com" },
+    { name: "DHL", domain: "dhl.com" },
+    { name: "Maersk", domain: "maersk.com" },
+    { name: "USPS", domain: "usps.com" },
+    { name: "TNT", domain: "tnt.com" },
+    { name: "Aramex", domain: "aramex.com" },
+    { name: "GLS", domain: "gls-group.com" },
+    { name: "Chronopost", domain: "chronopost.fr" },
+    { name: "Colissimo", domain: "colissimo.fr" },
+    { name: "DPD", domain: "dpd.com" },
+    { name: "Hermes", domain: "hermesworld.com" },
+    { name: "Royal Mail", domain: "royalmail.com" },
+    { name: "Canada Post", domain: "canadapost-postescanada.ca" },
+    { name: "Japan Post", domain: "post.japanpost.jp" },
+    { name: "China Post", domain: "chinapost.com.cn" },
+    { name: "SF Express", domain: "sf-express.com" },
+    { name: "YunExpress", domain: "yunexpress.com" },
+    { name: "CMA CGM", domain: "cma-cgm.com" },
+    { name: "MSC", domain: "msc.com" },
+    { name: "Hapag-Lloyd", domain: "hapag-lloyd.com" },
+    { name: "Emirates SkyCargo", domain: "emirates.com" },
+    { name: "Lufthansa Cargo", domain: "lufthansa-cargo.com" },
+    { name: "Air France Cargo", domain: "airfrancecargo.com" },
+  ];
+
   return (
     <div className="min-h-screen bg-white font-sans">
       <Navbar />
