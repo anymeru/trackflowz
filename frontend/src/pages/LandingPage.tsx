@@ -473,7 +473,7 @@ const LandingPage = () => {
 
       {/* ─── CTA ─── */}
       <section className="py-32 bg-gray-900">
-        <div className="container mx-auto px-6 text-center max-w-3xl" data-cta-root>
+        <div className="container mx-auto px-6 text-center max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 64, filter: "blur(8px)" }}
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
