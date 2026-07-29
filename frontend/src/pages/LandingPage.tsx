@@ -498,8 +498,8 @@ const LandingPage = () => {
                       title={p.name}
                     >
                       <div className="w-full aspect-[3/2] rounded-xl bg-gray-50 border border-black/[0.04] flex items-center justify-center p-3 transition-all duration-700 ease-out-expo group-hover:bg-white group-hover:shadow-[0_4px_24px_-8px_rgba(0,0,0,0.08)] group-hover:border-black/10">
-                        <img
-                          src={`https://logo.clearbit.com/${p.domain}`}
+                         <img
+                           src={`https://img.logo.dev/${p.domain}?token=${import.meta.env.VITE_LOVABLE_CONNECTOR_LOGO_DEV_API_KEY}&size=128&format=png`}
                           alt={`${p.name} logo`}
                           loading="lazy"
                           className="max-h-10 max-w-full object-contain grayscale opacity-70 transition-all duration-700 ease-out-expo group-hover:grayscale-0 group-hover:opacity-100"
