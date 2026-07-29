@@ -12,7 +12,6 @@ const airImg = { url: "https://images.unsplash.com/photo-1436491865332-7a61a109c
 const seaImg = { url: "https://images.unsplash.com/photo-1712578585447-2bab142270b0?w=800&q=80" };
 const roadImg = { url: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80" };
 const ieImg = { url: "https://images.unsplash.com/photo-1759389003827-2a214e4c73b4?w=800&q=80" };
-const logoDevKey = import.meta.env.VITE_LOVABLE_CONNECTOR_LOGO_DEV_API_KEY;
 
 const springEase = [0.32, 0.72, 0, 1] as const;
 
@@ -500,7 +499,7 @@ const LandingPage = () => {
                     >
                       <div className="w-full aspect-[3/2] rounded-xl bg-gray-50 border border-black/[0.04] flex items-center justify-center p-3 transition-all duration-700 ease-out-expo group-hover:bg-white group-hover:shadow-[0_4px_24px_-8px_rgba(0,0,0,0.08)] group-hover:border-black/10">
                         <img
-                          src={`https://img.logo.dev/${p.domain}?token=${logoDevKey}&size=128&format=png&fallback=404`}
+                          src={`https://${p.domain}/favicon.ico`}
                           alt={`${p.name} logo`}
                           loading="lazy"
                           className="max-h-10 max-w-full object-contain grayscale opacity-70 transition-all duration-700 ease-out-expo group-hover:grayscale-0 group-hover:opacity-100"
